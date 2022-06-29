@@ -5,10 +5,14 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { InnerMsgDirective } from './directives/inner-msg.directive';
 import { NgModule } from '@angular/core';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const declarations: any[] = [
   BaseComponent,
-  InnerMsgDirective
+  InnerMsgDirective,
+  HeaderComponent,
+  FooterComponent
 ];
 
 const imports = [CommonModule, FormsModule, ReactiveFormsModule, HttpClientModule,];
@@ -18,7 +22,7 @@ const imports = [CommonModule, FormsModule, ReactiveFormsModule, HttpClientModul
     ...imports
   ],
   declarations: [
-    ...declarations
+    ...declarations,
   ],
   exports: [
     ...imports,
